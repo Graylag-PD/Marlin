@@ -429,8 +429,8 @@
 #define DUMMY_THERMISTOR_999_VALUE 100
 
 // Resistor values when using MAX31865 sensors (-5) on TEMP_SENSOR_0 / 1
-//#define MAX31865_SENSOR_OHMS_0      100   // (Ω) Typically 100 or 1000 (PT100 or PT1000)
-//#define MAX31865_CALIBRATION_OHMS_0 430   // (Ω) Typically 430 for AdaFruit PT100; 4300 for AdaFruit PT1000
+#define MAX31865_SENSOR_OHMS_0      100   // (Ω) Typically 100 or 1000 (PT100 or PT1000)
+#define MAX31865_CALIBRATION_OHMS_0 430   // (Ω) Typically 430 for AdaFruit PT100; 4300 for AdaFruit PT1000
 //#define MAX31865_SENSOR_OHMS_1      100
 //#define MAX31865_CALIBRATION_OHMS_1 430
 
@@ -1159,7 +1159,7 @@
 #define XY_PROBE_FEEDRATE (4000)
 
 // Feedrate (mm/min) for the first approach when double-probing (MULTIPLE_PROBING == 2)
-#define Z_PROBE_FEEDRATE_FAST (HOMING_FEEDRATE_Z)
+#define Z_PROBE_FEEDRATE_FAST (40*60)
 
 // Feedrate (mm/min) for the "accurate" probe of each point
 #define Z_PROBE_FEEDRATE_SLOW (Z_PROBE_FEEDRATE_FAST / 4)
@@ -2841,11 +2841,9 @@ Custom pins for DRR200
 */
 #define PS_ON_PIN                           PD9
 
-#define MAX31865_SENSOR_OHMS	100
-#define MAX31865_CALIBRATION_OHMS	430
-#define MAX31865_CS_PIN		PA15
+//#define MAX31865_CS_PIN		PA15
 #define MAX31865_MOSI_PIN	PC12
 #define MAX31865_MISO_PIN	PC11
 #define MAX31865_SCK_PIN	PC10
-#define MAX6675_SS_PIN 0
+#define MAX6675_SS_PIN PA15
  
