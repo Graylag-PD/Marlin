@@ -133,7 +133,7 @@
 #endif
 
 // Name displayed in the LCD "Ready" message and Info menu
-#define CUSTOM_MACHINE_NAME "DRR200-32-S4X2"
+#define CUSTOM_MACHINE_NAME "DRR200-32-S4X1"
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like https://www.uuidgenerator.net/version4
@@ -2842,8 +2842,8 @@ Custom pins for DRR200
 #define PS_ON_PIN                           PD9
 
 //#define MAX31865_CS_PIN		PA15
-//#define MAX31865_MOSI_PIN	PC12
-//#define MAX31865_MISO_PIN	PC11
-//#define MAX31865_SCK_PIN	PC10
-#define MAX6675_SS_PIN PD8
+#define MAX31865_MOSI_PIN	PC12
+#define MAX31865_MISO_PIN	PC11
+#define MAX31865_SCK_PIN	PC10
+#define MAX6675_SS_PIN PA15
  
