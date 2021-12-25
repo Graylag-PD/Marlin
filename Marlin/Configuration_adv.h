@@ -2022,9 +2022,9 @@
 
     // Bed temperature calibration builds a similar table.
 
-    #define BTC_SAMPLE_START  25  // (°C)
+    #define BTC_SAMPLE_START  60  // (°C)
     #define BTC_SAMPLE_RES     5  // (°C)
-    #define BTC_SAMPLE_COUNT  20
+    #define BTC_SAMPLE_COUNT  12
 
     // The temperature the probe should be at while taking measurements during bed temperature
     // calibration.
@@ -2042,7 +2042,7 @@
     // If the probe is outside of the defined range, use linear extrapolation using the closest
     // point and the PTC_LINEAR_EXTRAPOLATION'th next point. E.g. if set to 4 it will use data[0]
     // and data[4] to perform linear extrapolation for values below PTC_SAMPLE_START.
-    //#define PTC_LINEAR_EXTRAPOLATION 4
+    #define PTC_LINEAR_EXTRAPOLATION 4
   #endif
 #endif
 
