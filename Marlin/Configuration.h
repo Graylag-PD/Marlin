@@ -145,7 +145,7 @@
 //#define BLUETOOTH
 
 // Name displayed in the LCD "Ready" message and Info menu
-#define CUSTOM_MACHINE_NAME "DRR210-S7X2"
+#define CUSTOM_MACHINE_NAME "DRR210-S7X4"
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like https://www.uuidgenerator.net/version4
@@ -813,9 +813,9 @@
   #define DELTA_DIAGONAL_ROD 261.39        // (mm)
 
   // Distance between bed and nozzle Z home position
-  #define DELTA_HEIGHT 285.65             // (mm) Get this value from G33 auto calibrate
+  #define DELTA_HEIGHT 288.24             // (mm) Get this value from G33 auto calibrate
 
-  #define DELTA_ENDSTOP_ADJ { -0.99, 0.0, -1.35 } // Get these values from G33 auto calibrate
+  #define DELTA_ENDSTOP_ADJ { 0.0, -1.16, -0.08 } // Get these values from G33 auto calibrate
 
   // Horizontal distance bridged by diagonal push rods when effector is centered.
   #define DELTA_RADIUS 123.45              // (mm) Get this value from G33 auto calibrate
