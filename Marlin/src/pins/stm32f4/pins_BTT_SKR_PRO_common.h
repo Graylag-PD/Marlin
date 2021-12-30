@@ -60,12 +60,12 @@
 //
 // Trinamic Stallguard pins
 //
-#define X_DIAG_PIN                          PB10  // X-
+#define X_DIAG_PIN                          PG5  // X-
 #define Y_DIAG_PIN                          PE12  // Y-
 #define Z_DIAG_PIN                          PG8   // Z-
 #define E0_DIAG_PIN                         PE15  // E0
 #define E1_DIAG_PIN                         PE10  // E1
-#define E2_DIAG_PIN                         PG5   // E2
+#define E2_DIAG_PIN                         PB10   // E2
 
 //
 // Limit Switches
@@ -79,7 +79,7 @@
   #endif
 #else
   #define X_MIN_PIN                         PE15  // X-
-  #define X_MAX_PIN                         PB10  // E0
+  #define X_MAX_PIN                         PG5  // E0
 #endif
 
 #ifdef Y_STALL_SENSITIVITY
@@ -129,11 +129,11 @@
 //
 // Steppers
 //
-#define X_STEP_PIN                          PE9
-#define X_DIR_PIN                           PF1
-#define X_ENABLE_PIN                        PF2
+#define X_STEP_PIN                          PD13  //PE9
+#define X_DIR_PIN                           PG9   //PF1
+#define X_ENABLE_PIN                        PF0   //PF2
 #ifndef X_CS_PIN
-  #define X_CS_PIN                          PA15
+  #define X_CS_PIN                          PG12  //PA15
 #endif
 
 #define Y_STEP_PIN                          PE11
@@ -164,11 +164,11 @@
   #define E1_CS_PIN                         PG15
 #endif
 
-#define E2_STEP_PIN                         PD13
-#define E2_DIR_PIN                          PG9
-#define E2_ENABLE_PIN                       PF0
+#define E2_STEP_PIN                         PE9
+#define E2_DIR_PIN                          PF1
+#define E2_ENABLE_PIN                       PF2
 #ifndef E2_CS_PIN
-  #define E2_CS_PIN                         PG12
+  #define E2_CS_PIN                         PA15
 #endif
 
 //
@@ -205,7 +205,7 @@
   //#define E3_HARDWARE_SERIAL Serial1
   //#define E4_HARDWARE_SERIAL Serial1
 
-  #define X_SERIAL_TX_PIN                   PC13
+  #define X_SERIAL_TX_PIN                   PD6 //PC13
   #define X_SERIAL_RX_PIN        X_SERIAL_TX_PIN
 
   #define Y_SERIAL_TX_PIN                   PE3
@@ -220,7 +220,7 @@
   #define E1_SERIAL_TX_PIN                  PD1
   #define E1_SERIAL_RX_PIN      E1_SERIAL_TX_PIN
 
-  #define E2_SERIAL_TX_PIN                  PD6
+  #define E2_SERIAL_TX_PIN                  PC13
   #define E2_SERIAL_RX_PIN      E2_SERIAL_TX_PIN
 
   // Reduce baud rate to improve software serial reliability
