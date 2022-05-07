@@ -75,7 +75,7 @@ const unsigned char status_logo_bmp[] PROGMEM = {
   B00000000,B00000001,B11111111,B00000000,B00000000, // ...............#########................
   B00000000,B00000000,B00000000,B00000000,B00000000  // ........................................
 };
-
+/*
 #if !STATUS_CHAMBER_WIDTH && HAS_TEMP_CHAMBER && ((HOTENDS <= 4 && !HAS_HEATED_BED) || (HOTENDS <= 3 && HAS_HEATED_BED))
   #define STATUS_CHAMBER_WIDTH 21
   #if STATUS_HEATERS_WIDTH
@@ -141,7 +141,7 @@ const unsigned char status_logo_bmp[] PROGMEM = {
 
   #endif
 #endif
-
+*/
 //
 // Use default bitmaps
 //

@@ -435,7 +435,7 @@
 
 #elif HAS_WIRED_LCD
 
-  #define BEEPER_PIN                 EXP1_10_PIN
+  //#define BEEPER_PIN                 EXP1_10_PIN
   #define BTN_ENC                    EXP1_09_PIN
 
   #if ENABLED(CR10_STOCKDISPLAY)
