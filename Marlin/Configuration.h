@@ -145,7 +145,7 @@
 //#define BLUETOOTH
 
 // Name displayed in the LCD "Ready" message and Info menu
-#define CUSTOM_MACHINE_NAME "DRR210-S8X1"
+#define CUSTOM_MACHINE_NAME "DRR210-S8X2"
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like https://www.uuidgenerator.net/version4
@@ -377,7 +377,7 @@
   #define PSU_POWERUP_DELAY 1000   // (ms) Delay for the PSU to warm up to full power
 
   //#define PSU_POWERUP_GCODE  "M355 S1"  // G-code to run after power-on (e.g., case light on)
-  #define PSU_POWEROFF_GCODE "M355 S0\nM107 P0\nM107 P1\nM107 P2"  // G-code to run before power-off (e.g., case light off)
+  #define PSU_POWEROFF_GCODE "M355 S0"  // G-code to run before power-off (e.g., case light off)
 
   #define AUTO_POWER_CONTROL      // Enable automatic control of the PS_ON pin
   #if ENABLED(AUTO_POWER_CONTROL)
@@ -810,24 +810,24 @@
   #define DELTA_PRINTABLE_RADIUS 105.0    // (mm)
 
   // Center-to-center distance of the holes in the diagonal push rods.
-  #define DELTA_DIAGONAL_ROD 261.391        // (mm)
+  #define DELTA_DIAGONAL_ROD 261.251        // (mm)
 
   // Distance between bed and nozzle Z home position
-  #define DELTA_HEIGHT 284.6408             // (mm) Get this value from G33 auto calibrate
+  #define DELTA_HEIGHT 285.1313             // (mm) Get this value from G33 auto calibrate
 
-  #define DELTA_ENDSTOP_ADJ { -2.3139, -3.496, 0.0 } // Get these values from G33 auto calibrate
+  #define DELTA_ENDSTOP_ADJ { -2.277, -2.8129, 0.0 } // Get these values from G33 auto calibrate
 
   // Horizontal distance bridged by diagonal push rods when effector is centered.
-  #define DELTA_RADIUS 122.8516              // (mm) Get this value from G33 auto calibrate
+  #define DELTA_RADIUS 122.6193              // (mm) Get this value from G33 auto calibrate
 
   // Trim adjustments for individual towers
   // tower angle corrections for X and Y tower / rotate XYZ so Z tower angle = 0
   // measured in degrees anticlockwise looking from above the printer
-  #define DELTA_TOWER_ANGLE_TRIM { 1.3779, 0.4518, -1.8297 } // Get these values from G33 auto calibrate
+  #define DELTA_TOWER_ANGLE_TRIM { 1.2647, 0.3719, -1.6366 } // Get these values from G33 auto calibrate
 
   // Delta radius and diagonal rod adjustments (mm)
   #define DELTA_RADIUS_TRIM_TOWER { -2.15, 2.5, 1.4 }
-  #define DELTA_DIAGONAL_ROD_TRIM_TOWER { 0.115, 0.092, -0.208 }
+  #define DELTA_DIAGONAL_ROD_TRIM_TOWER { -0.726, 0.993, -0.267 }
 
 #endif
 
