@@ -145,7 +145,7 @@
 //#define BLUETOOTH
 
 // Name displayed in the LCD "Ready" message and Info menu
-#define CUSTOM_MACHINE_NAME "DRR210-S8X2"
+#define CUSTOM_MACHINE_NAME "DRR210-S8X3"
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like https://www.uuidgenerator.net/version4
@@ -384,7 +384,7 @@
     #define AUTO_POWER_FANS         // Turn on PSU if fans need power
     #define AUTO_POWER_E_FANS
     #define AUTO_POWER_CONTROLLERFAN
-    #define AUTO_POWER_CHAMBER_FAN
+    //#define AUTO_POWER_CHAMBER_FAN
     #define AUTO_POWER_COOLER_FAN
     #define AUTO_POWER_E_TEMP        50 // (°C) Turn on PSU if any extruder is over this temperature
     //#define AUTO_POWER_CHAMBER_TEMP  30 // (°C) Turn on PSU if the chamber is over this temperature
@@ -1591,7 +1591,7 @@
   // Commands to execute on filament runout.
   // With multiple runout sensors use the %c placeholder for the current tool in commands (e.g., "M600 T%c")
   // NOTE: After 'M412 H1' the host handles filament runout and this script does not apply.
-  #define FILAMENT_RUNOUT_SCRIPT "M600"
+  #define FILAMENT_RUNOUT_SCRIPT "M125 L5 P1"
 
   // After a runout is detected, continue printing this length of filament
   // before executing the runout script. Useful for a sensor at the end of
@@ -2939,7 +2939,7 @@
 
 // Set number of user-controlled fans. Disable to use all board-defined fans.
 // :[1,2,3,4,5,6,7,8]
-#define NUM_M106_FANS 3
+#define NUM_M106_FANS 2
 
 // Use software PWM to drive the fan, as for the heaters. This uses a very low frequency
 // which is not as annoying as with the hardware PWM. On the other hand, if this frequency
@@ -3074,16 +3074,8 @@
 // Disable servo with M282 to reduce power consumption, noise, and heat when not in use
 //#define SERVO_DETACH_GCODE
 
-/*
-Custom pins for DRR210 - Mostly deprecated with switch to Octopus
-*/
-//#define PS_ON_PIN                           PD9
 
-//#define MAX31865_CS_PIN		PA15
-//#define MAX31865_MOSI_PIN	PC12
-//#define MAX31865_MISO_PIN	PC11
-//#define MAX31865_SCK_PIN	PC10
-//#define MAX6675_SS_PIN PA15
+//Custom pins for DRR210 - Mostly deprecated with switch to Octopus
 
 #define TEMP_CHAMBER_PIN TEMP_2_PIN
 #define TEMP_PROBE_PIN TEMP_3_PIN
