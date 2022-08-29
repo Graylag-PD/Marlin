@@ -71,7 +71,7 @@
 // @section info
 
 // Author info of this build printed to the host during boot and M115
-#define STRING_CONFIG_H_AUTHOR "PDL-M2.0.9.3-S8" // Who made the changes.
+#define STRING_CONFIG_H_AUTHOR "PDL-M2.1-S9" // Who made the changes.
 //#define CUSTOM_VERSION_FILE Version.h // Path from the root directory (no quotes)
 
 /**
@@ -145,7 +145,7 @@
 //#define BLUETOOTH
 
 // Name displayed in the LCD "Ready" message and Info menu
-#define CUSTOM_MACHINE_NAME "DRR210-S8X3"
+#define CUSTOM_MACHINE_NAME "DRR210-S9X1"
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like https://www.uuidgenerator.net/version4
@@ -407,13 +407,13 @@
  * Specify whether the power supply is active HIGH or active LOW.
  */
 #define PSU_CONTROL
-//#define PSU_NAME "Power Supply"
+#define PSU_NAME "RSP-150-24 (dual)"
 
 #if ENABLED(PSU_CONTROL)
   //#define MKS_PWC                 // Using the MKS PWC add-on
   //#define PS_OFF_CONFIRM          // Confirm dialog when power off
   //#define PS_OFF_SOUND            // Beep 1s when power off
-  #define PSU_ACTIVE_STATE LOW      // Set 'LOW' for ATX, 'HIGH' for X-Box
+  #define PSU_ACTIVE_STATE HIGH      // Set 'LOW' for ATX, 'HIGH' for X-Box
 
   #define PSU_DEFAULT_OFF               // Keep power off until enabled directly with M80
   #define PSU_POWERUP_DELAY      1000    // (ms) Delay for the PSU to warm up to full power
@@ -771,7 +771,7 @@
  * When set to any value below 255, enables a form of PWM to the chamber heater that acts like a divider
  * so don't use it unless you are OK with PWM on your heater. (See the comment on enabling PIDTEMPCHAMBER)
  */
-#define MAX_CHAMBER_POWER 255 // limits duty cycle to chamber heater; 255=full current
+#define MAX_CHAMBER_POWER 0 // limits duty cycle to chamber heater; 255=full current
 
 #if ENABLED(PIDTEMPCHAMBER)
   #define MIN_CHAMBER_POWER 0
@@ -907,24 +907,24 @@
   #define DELTA_PRINTABLE_RADIUS 105.0    // (mm)
 
   // Center-to-center distance of the holes in the diagonal push rods.
-  #define DELTA_DIAGONAL_ROD 261.251        // (mm)
+  #define DELTA_DIAGONAL_ROD 261.903        // (mm)
 
   // Distance between bed and nozzle Z home position
-  #define DELTA_HEIGHT 285.1313             // (mm) Get this value from G33 auto calibrate
+  #define DELTA_HEIGHT 281.3595             // (mm) Get this value from G33 auto calibrate
 
-  #define DELTA_ENDSTOP_ADJ { -2.277, -2.8129, 0.0 } // Get these values from G33 auto calibrate
+  #define DELTA_ENDSTOP_ADJ { -2.1781, -2.7139, 0.0 } // Get these values from G33 auto calibrate
 
   // Horizontal distance bridged by diagonal push rods when effector is centered.
-  #define DELTA_RADIUS 122.6193              // (mm) Get this value from G33 auto calibrate
+  #define DELTA_RADIUS 123.0209              // (mm) Get this value from G33 auto calibrate
 
   // Trim adjustments for individual towers
   // tower angle corrections for X and Y tower / rotate XYZ so Z tower angle = 0
   // measured in degrees anticlockwise looking from above the printer
-  #define DELTA_TOWER_ANGLE_TRIM { 1.2647, 0.3719, -1.6366 } // Get these values from G33 auto calibrate
+  #define DELTA_TOWER_ANGLE_TRIM { 1.2921, 0.441, -1.733 } // Get these values from G33 auto calibrate
 
   // Delta radius and diagonal rod adjustments (mm)
   #define DELTA_RADIUS_TRIM_TOWER { -2.15, 2.5, 1.4 }
-  #define DELTA_DIAGONAL_ROD_TRIM_TOWER { -0.726, 0.993, -0.267 }
+  #define DELTA_DIAGONAL_ROD_TRIM_TOWER { -0.549, 1.078, -0.528 }
 
 #endif
 
@@ -1667,7 +1667,7 @@
  */
 #define FILAMENT_RUNOUT_SENSOR
 #if ENABLED(FILAMENT_RUNOUT_SENSOR)
-  #define FIL_RUNOUT_ENABLED_DEFAULT false // Enable the sensor on startup. Override with M412 followed by M500.
+  #define FIL_RUNOUT_ENABLED_DEFAULT true // Enable the sensor on startup. Override with M412 followed by M500.
   #define NUM_RUNOUT_SENSORS   2          // Number of sensors, up to one per extruder. Define a FIL_RUNOUT#_PIN for each.
 
   #define FIL_RUNOUT_STATE     LOW        // Pin state indicating that filament is NOT present.
