@@ -145,7 +145,7 @@
 //#define BLUETOOTH
 
 // Name displayed in the LCD "Ready" message and Info menu
-#define CUSTOM_MACHINE_NAME "DRR210-S9X1"
+#define CUSTOM_MACHINE_NAME "DRR210-S9X2"
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like https://www.uuidgenerator.net/version4
@@ -181,8 +181,8 @@
 //#define U_DRIVER_TYPE  A4988
 //#define V_DRIVER_TYPE  A4988
 //#define W_DRIVER_TYPE  A4988
-#define E0_DRIVER_TYPE TMC2209
-#define E1_DRIVER_TYPE TMC2209
+#define E0_DRIVER_TYPE A4988
+#define E1_DRIVER_TYPE A4988
 //#define E2_DRIVER_TYPE A4988
 //#define E3_DRIVER_TYPE A4988
 //#define E4_DRIVER_TYPE A4988
@@ -907,24 +907,24 @@
   #define DELTA_PRINTABLE_RADIUS 105.0    // (mm)
 
   // Center-to-center distance of the holes in the diagonal push rods.
-  #define DELTA_DIAGONAL_ROD 261.903        // (mm)
+  #define DELTA_DIAGONAL_ROD 260.0        // (mm)
 
   // Distance between bed and nozzle Z home position
   #define DELTA_HEIGHT 281.3595             // (mm) Get this value from G33 auto calibrate
 
-  #define DELTA_ENDSTOP_ADJ { -2.1781, -2.7139, 0.0 } // Get these values from G33 auto calibrate
+  #define DELTA_ENDSTOP_ADJ { -2.274, -2.774, 0.0 } // Get these values from G33 auto calibrate
 
   // Horizontal distance bridged by diagonal push rods when effector is centered.
-  #define DELTA_RADIUS 123.0209              // (mm) Get this value from G33 auto calibrate
+  #define DELTA_RADIUS 122.0              // (mm) Get this value from G33 auto calibrate
 
   // Trim adjustments for individual towers
   // tower angle corrections for X and Y tower / rotate XYZ so Z tower angle = 0
   // measured in degrees anticlockwise looking from above the printer
-  #define DELTA_TOWER_ANGLE_TRIM { 1.2921, 0.441, -1.733 } // Get these values from G33 auto calibrate
+  #define DELTA_TOWER_ANGLE_TRIM { 0.0, 0.0, 0.0 } // Get these values from G33 auto calibrate
 
   // Delta radius and diagonal rod adjustments (mm)
-  #define DELTA_RADIUS_TRIM_TOWER { -2.15, 2.5, 1.4 }
-  #define DELTA_DIAGONAL_ROD_TRIM_TOWER { -0.549, 1.078, -0.528 }
+  #define DELTA_RADIUS_TRIM_TOWER { 0.0, 0.0, 0.0 }
+  #define DELTA_DIAGONAL_ROD_TRIM_TOWER { 0.0, 0.0, 0.0 }
 
 #endif
 
