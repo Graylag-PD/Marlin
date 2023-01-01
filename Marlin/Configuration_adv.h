@@ -2544,7 +2544,7 @@
      *  [ Power-On -> T0 { T0 Activated } -> T1 { Activate & Prime T1 } -> T0 { Retract T1, Activate & Prime T0 } ]
      * Enable with M217 V1 before printing to avoid unwanted priming on host connect.
      */
-    //#define TOOLCHANGE_FS_PRIME_FIRST_USED
+    #define TOOLCHANGE_FS_PRIME_FIRST_USED
 
     /**
      * Tool Change Migration
