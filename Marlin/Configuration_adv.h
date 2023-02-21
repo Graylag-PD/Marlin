@@ -3708,7 +3708,7 @@
  *
  * Execute certain G-code commands immediately after power-on.
  */
-//#define STARTUP_COMMANDS "M141 S50"
+#define STARTUP_COMMANDS "M150 B0 R0 U0"
 
 /**
  * G-code Macros

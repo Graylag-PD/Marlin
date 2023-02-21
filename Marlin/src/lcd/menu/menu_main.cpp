@@ -339,6 +339,10 @@ void menu_main() {
     SUBMENU(MSG_TEMPERATURE, menu_temperature);
   #endif
 
+  #if ENABLED(ADVANCED_PAUSE_FEATURE) && DISABLED(DISABLE_ENCODER)
+    FILAMENT_CHANGE_ITEM();
+  #endif
+
   #if HAS_POWER_MONITOR
     SUBMENU(MSG_POWER_MONITOR, menu_power_monitor);
   #endif
@@ -461,9 +465,7 @@ void menu_main() {
     });
   #endif
 
-  #if ENABLED(ADVANCED_PAUSE_FEATURE) && DISABLED(DISABLE_ENCODER)
-    FILAMENT_CHANGE_ITEM();
-  #endif
+
 
   END_MENU();
 }
