@@ -62,8 +62,8 @@
 // @section info
 
 // Author info of this build printed to the host during boot and M115
-#define STRING_CONFIG_H_AUTHOR "PDL-M2.1-S9" // Who made the changes.
-//#define CUSTOM_VERSION_FILE Version.h // Path from the root directory (no quotes)
+#define STRING_CONFIG_H_AUTHOR "Pavel Dolejsi" // Who made the changes.
+#define CUSTOM_VERSION_FILE Version.h // Path from the root directory (no quotes)
 
 /**
  * *** VENDORS PLEASE READ ***
@@ -136,11 +136,11 @@
 //#define BLUETOOTH
 
 // Name displayed in the LCD "Ready" message and Info menu
-#define CUSTOM_MACHINE_NAME "DRR210-S9X5"
+//#define CUSTOM_MACHINE_NAME "DRR210"
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like https://www.uuidgenerator.net/version4
-#define MACHINE_UUID "1331b0ba-a97b-48a2-a10b-43fd4a36cebd"
+//#define MACHINE_UUID "1331b0ba-a97b-48a2-a10b-43fd4a36cebd"
 
 // @section stepper drivers
 
@@ -1306,7 +1306,7 @@
  *      - normally-closed switches to GND and D32.
  *      - normally-open switches to 5V and D32.
  */
-//#define Z_MIN_PROBE_PIN PA2 // Pin 32 is the RAMPS default
+#define Z_MIN_PROBE_PIN PG15 // Pin 32 is the RAMPS default
 
 /**
  * Probe Type
@@ -1495,7 +1495,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { 0, -28, -0.25 }
+#define NOZZLE_TO_PROBE_OFFSET { 0, 0, 0 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
