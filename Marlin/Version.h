@@ -28,20 +28,20 @@
 /**
  * Marlin release version identifier
  */
-#define SHORT_BUILD_VERSION "2.1.2"
+#define SHORT_BUILD_VERSION "2.1.2.1"
 
 /**
  * Verbose version identifier which should contain a reference to the location
  * from where the binary was downloaded or the source code was compiled.
  */
-#define DETAILED_BUILD_VERSION "2.1.2-S9X6"
+#define DETAILED_BUILD_VERSION "2.1.2.1-S9X8"
 
 /**
  * The STRING_DISTRIBUTION_DATE represents when the binary file was built,
  * here we define this default string as the date where the latest release
  * version was tagged.
  */
-#define STRING_DISTRIBUTION_DATE "2023-07-06"
+#define STRING_DISTRIBUTION_DATE "2023-05-16"
 
 /**
  * Defines a generic printer name to be output to the LCD after booting Marlin.
