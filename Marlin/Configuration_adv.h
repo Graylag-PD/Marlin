@@ -1081,8 +1081,8 @@
  *  X<1>         Set the given parameters only for the X axis.
  *  Y<1>         Set the given parameters only for the Y axis.
  */
-#define INPUT_SHAPING_X
-#define INPUT_SHAPING_Y
+//#define INPUT_SHAPING_X
+//#define INPUT_SHAPING_Y
 #if EITHER(INPUT_SHAPING_X, INPUT_SHAPING_Y)
   #if ENABLED(INPUT_SHAPING_X)
     #define SHAPING_FREQ_X  39          // (Hz) The default dominant resonant frequency on the X axis.
@@ -2234,15 +2234,15 @@
     // (e.g., 30), in steps of PTC_PROBE_RES (e.g., 5) with PTC_PROBE_COUNT (e.g., 10) samples.
     #define PTC_PROBE_START   30    // (°C)
     #define PTC_PROBE_RES      5    // (°C)
-    #define PTC_PROBE_COUNT   10
+    #define PTC_PROBE_COUNT   6
     #define PTC_PROBE_ZOFFS   { 0 } // (µm) Z adjustments per sample
   #endif
 
   #if ENABLED(PTC_BED)
     // Bed temperature calibration builds a similar table.
     #define PTC_BED_START     60    // (°C)
-    #define PTC_BED_RES        5    // (°C)
-    #define PTC_BED_COUNT     12
+    #define PTC_BED_RES        10    // (°C)
+    #define PTC_BED_COUNT     6
     #define PTC_BED_ZOFFS     { 0 } // (µm) Z adjustments per sample
   #endif
 
@@ -2257,7 +2257,7 @@
   // G76 options
   #if BOTH(PTC_PROBE, PTC_BED)
     // Park position to wait for probe cooldown
-    #define PTC_PARK_POS   { 0, 28, 100 }
+    #define PTC_PARK_POS   { 0, 0, 100 }
 
     // Probe position to probe and wait for probe to reach target temperature
     //#define PTC_PROBE_POS  { 12.0f, 7.3f } // Example: MK52 magnetic heatbed

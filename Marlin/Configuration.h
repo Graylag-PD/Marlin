@@ -668,9 +668,9 @@
     #define DEFAULT_Ki_LIST {   1.08,   1.08 }
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
-    #define DEFAULT_Kp 19.6851
-    #define DEFAULT_Ki 1.3229
-    #define DEFAULT_Kd 73.2287
+    #define DEFAULT_Kp 23.1333
+    #define DEFAULT_Ki 1.7850
+    #define DEFAULT_Kd 74.9520
   #endif
 #endif
 
@@ -1996,13 +1996,13 @@
   //========================= Unified Bed Leveling ============================
   //===========================================================================
 
-  //#define MESH_EDIT_GFX_OVERLAY   // Display a graphics overlay while editing the mesh
+  #define MESH_EDIT_GFX_OVERLAY   // Display a graphics overlay while editing the mesh
 
-  #define MESH_INSET 1              // Set Mesh bounds as an inset region of the bed
-  #define GRID_MAX_POINTS_X 10      // Don't use more than 15 points per axis, implementation limited.
+  #define MESH_INSET 0              // Set Mesh bounds as an inset region of the bed
+  #define GRID_MAX_POINTS_X 15      // Don't use more than 15 points per axis, implementation limited.
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
-  //#define UBL_HILBERT_CURVE       // Use Hilbert distribution for less travel when probing multiple points
+  #define UBL_HILBERT_CURVE       // Use Hilbert distribution for less travel when probing multiple points
 
   #define UBL_MESH_EDIT_MOVES_Z     // Sophisticated users prefer no movement of nozzle
   #define UBL_SAVE_ACTIVE_ON_M500   // Save the currently active mesh in the current slot on M500
@@ -2227,16 +2227,22 @@
 // Preheat Constants - Up to 10 are supported without changes
 //
 #define PREHEAT_1_LABEL       "PLA"
-#define PREHEAT_1_TEMP_HOTEND 180
+#define PREHEAT_1_TEMP_HOTEND 160
 #define PREHEAT_1_TEMP_BED     60
 #define PREHEAT_1_TEMP_CHAMBER 25
 #define PREHEAT_1_FAN_SPEED   0 // Value from 0 to 255
 
-#define PREHEAT_2_LABEL       "ABS"
-#define PREHEAT_2_TEMP_HOTEND 220
-#define PREHEAT_2_TEMP_BED    100
+#define PREHEAT_2_LABEL       "PETG"
+#define PREHEAT_2_TEMP_HOTEND 200
+#define PREHEAT_2_TEMP_BED    90
 #define PREHEAT_2_TEMP_CHAMBER 50
 #define PREHEAT_2_FAN_SPEED   0 // Value from 0 to 255
+
+#define PREHEAT_3_LABEL       "ABS"
+#define PREHEAT_3_TEMP_HOTEND 200
+#define PREHEAT_3_TEMP_BED    110
+#define PREHEAT_3_TEMP_CHAMBER 50
+#define PREHEAT_3_FAN_SPEED   0 // Value from 0 to 255
 
 // @section motion
 
