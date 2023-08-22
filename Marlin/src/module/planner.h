@@ -279,6 +279,10 @@ typedef struct PlannerBlock {
     block_laser_t laser;
   #endif
 
+  #if (IS_KINEMATIC && ENABLED(LIN_ADVANCE))
+    float e_steps_float;
+  #endif
+
   void reset() { memset((char*)this, 0, sizeof(*this)); }
 
 } block_t;
