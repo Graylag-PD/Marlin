@@ -23,8 +23,8 @@
 /**
  * DWIN g-code thumbnail preview
  * Author: Miguel A. Risco-Castillo
- * version: 2.1
- * Date: 2021/06/19
+ * version: 3.1.2
+ * Date: 2022/09/03
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as
@@ -42,9 +42,9 @@
  * For commercial applications additional licenses can be requested
  */
 
-#include "dwin_defines.h"
+#include "../../../inc/MarlinConfigPre.h"
 
-#if HAS_GCODE_PREVIEW
+#if BOTH(DWIN_LCD_PROUI, HAS_GCODE_PREVIEW)
 
 #include "../../../core/types.h"
 #include "../../marlinui.h"
@@ -243,6 +243,10 @@ void Preview_DrawFromSD() {
   }
 }
 
+void Preview_Invalidate() {
+  fileprop.thumbstart = 0;
+}
+
 bool Preview_Valid() {
   return !!fileprop.thumbstart;
 }
@@ -251,4 +255,4 @@ void Preview_Reset() {
   fileprop.thumbsize = 0;
 }
 
-#endif // HAS_GCODE_PREVIEW
+#endif // HAS_GCODE_PREVIEW && DWIN_LCD_PROUI
