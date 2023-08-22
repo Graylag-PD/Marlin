@@ -861,7 +861,11 @@ void Planner::calculate_trapezoid_for_block(block_t * const block, const_float_t
 
   #if ENABLED(LIN_ADVANCE)
     if (block->la_advance_rate) {
-      const float comp = extruder_advance_K[E_INDEX_N(block->extruder)] * block->steps.e / block->step_event_count;
+      #if IS_KINEMATIC
+        const float comp = extruder_advance_K[E_INDEX_N(block->extruder)] * block->e_steps_float / block->step_event_count;
+      #else
+        const float comp = extruder_advance_K[E_INDEX_N(block->extruder)] * block->steps.e / block->step_event_count;
+      #endif
       block->max_adv_steps = cruise_rate * comp;
       block->final_adv_steps = final_rate * comp;
     }
@@ -2548,6 +2552,10 @@ bool Planner::_populate_block(
       #if ENABLED(LA_DEBUG)
         if (block->la_advance_rate >> block->la_scaling > 10000)
           SERIAL_ECHOLNPGM("eISR running at > 10kHz: ", block->la_advance_rate);
+      #endif
+      
+      #if IS_KINEMATIC
+        block->e_steps_float = TERN(HAS_POSITION_FLOAT, target_float.e * settings.axis_steps_per_mm[E_AXIS_N(extruder)], target.e);
       #endif
     }
   #endif
